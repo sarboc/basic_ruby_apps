@@ -1,4 +1,4 @@
-bottles = 99
+bottles = 15 #or 99, if you want 100 verses of the song
 
 until bottles == 0
     puts "#{bottles} bottles of beer on the wall!"
