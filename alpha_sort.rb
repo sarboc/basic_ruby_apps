@@ -13,14 +13,17 @@ end
 puts "Would you like to sort 'alpha' or 'reverse'?"
 sort_type = gets.chomp
 
+until ( sort_type == "alpha" || sort_type == "reverse" )
+  puts "Sorry, I don't know that sort order."
+  puts "Please choose 'alpha' or 'reverse'"
+  sort_type = gets.chomp
+end
+
 case sort_type
-    when "alpha" then words.sort!
-    when "reverse" then words.sort!.reverse!
-    else puts "Sorry, I don't know that sort order."
-        puts "Please choose 'alpha' or 'reverse'"
-        sort_type = gets.chomp
+  when "alpha" then words.sort!
+  when "reverse" then words.sort!.reverse!
 end
 
 puts ""
 puts "Here is your #{sort_type} sorted list:"
-words.each{|x| puts x}
+words.each{ |x| puts x }
